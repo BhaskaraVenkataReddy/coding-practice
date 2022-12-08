@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://i.pinimg.com/originals/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.png"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact||ComputerGeek||</title>
+    <style>
+        @import "style-screen.css" screen;
+        @import "style-print.css" print,speech;
+        body
+        {
+            background-image: url('./img/marvin-meyer-SYTO3xs06fU-unsplash.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: cover;
+            font-family: Arial;
+            margin: 0;
+        }
+        .body
+        {
+            display: grid;
+            background: rgba(0, 0, 0, 0.4);
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 2fr 3fr;
+            padding: 20px;
+            grid-column-gap: 17px;
+            grid-row-gap: 17px;
+            grid-template-areas: 
+                'n1 creators n2'
+                'n3 contact n4';
+            /* grid-auto-rows: minmax(100px, auto); */
+        }
+        .creators
+        {
+            display: grid;
+            background: rgba(0, 0, 0, 0.4);
+            grid-template-columns: 1fr 4fr;
+            /* grid-template-rows: 1fr 1fr 1fr; */
+            /* padding: 20px;
+            grid-column-gap: 17px;
+            grid-row-gap: 17px; */
+            grid-template-areas: 
+                'img1 name1'
+                'img2 name2'
+                'img3 name3';
+            /* grid-auto-rows: minmax(100px, auto); */
+        }
+        .name1,.name2,.name3
+        {
+            border:2px solid aqua;
+            margin: 10px;
+            padding: 10px;
+            color:white;
+            padding-left: 30px;
+        }
+        .img1,.img2,.img3
+        {
+            padding:10px;
+            
+        }
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+        input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        background-color: rgb(1, 61, 61);
+        border: 1px solid aqua;
+        color: aqua;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        }
+
+        input[type=submit] {
+        background-color: #ff0000;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+        input[type=submit]:hover
+        {
+        background-color: rgb(0, 255, 26);
+        color: black;
+        border:1px solid black;
+        }
+        input:focus {
+        background-color: aqua;
+        color: black;
+        }
+        .contact {
+        border-radius: 5px;
+        background-color: #080000;
+        border:2px solid rgb(0, 255, 255);
+        padding: 20px;
+        }
+        .image{
+            border-radius: 50%;
+        }
+        .nav-links{
+		    flex:1;
+			text-align:left;
+		}
+		.nav-links ul li{
+		    list-style:none;
+			display:inline-block;
+			padding:8px 12px;
+			position:relative;
+		}
+				.nav-links ul li a{
+		    color:#fff;
+			text-decoration:none;
+			font-size:13px;
+		}
+		.nav-links ul li a:hover{
+		    color:rgb(0, 0, 0);
+			text-transform:30px;
+		}
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+        <a href="home5.html"></a>
+        <div class="nav-links">
+        <ul>
+        <li><a href="home.html">BACK</a></li>
+        </ul>
+        </div>
+        </nav>
+    <div class="body">
+        <div class="n1"></div>
+        <div class="creators">
+                <div class="img1">
+                    <img src="./img/7.jpg" class="image" height="120">
+                </div>
+                <div class="name2">
+                    <h3>Vikas Gurram</h3>
+                    <p>email: <a href='#'>vikasgurram26@gmail.com</a></p>
+                </div>
+                <div class="img1">
+                    <img src="./img/1.jpeg" class="image" height="120">
+                </div>
+                <div class="name1">
+                    <h3>Arsh Rana</h3>
+                    <p>email: <a href='#'>arshrana123@gmail.com</a></p>
+                </div>
+        </div>
+        <div class="n2"></div>
+        <div class="n3"></div>
+        <div class="contact">
+            <form action="/action_page.php">
+                <label for="fname" style="color:lime">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            
+                <label for="lname" style="color:lime">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            
+                <label for="location" style="color:lime">location</label>
+                <select id="location" name="location">
+                  <option value="location">Location</option>
+                  <option value="australia">Australia</option>
+                  <option value="canada">Canada</option>
+                  <option value="usa">USA</option>
+                </select>
+            
+                <label for="subject" style="color:lime">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            
+                <input type="submit" value="Submit">
+              </form>
+        </div>
+        <div class="n4"></div>
+    </div>
+</body>
+</html>

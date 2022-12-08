@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://i.pinimg.com/originals/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.png"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <title>ComputerGeeks</title>
+    <style>
+        @import "style-screen.css" screen;
+        @import "style-print.css" print,speech;
+        #more {display: none;}
+        body {
+            background-image: url('https://images.pexels.com/photos/4974912/pexels-photo-4974912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: cover;
+            font-family: 'Trebuchet MS', sans-serif;
+            margin: 0;
+        }
+        .head
+        {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed; /* Set the navbar to fixed position */
+            top: 0; /* Position the navbar at the top of the page */
+            width: 98%; /* Full width */
+            display: grid;
+            background: rgb(0, 0, 0);
+            grid-template-columns: 0.5fr 3fr 1fr 1.5fr 1fr;
+            padding: 20px;
+            grid-column-gap: 17px;
+            grid-row-gap: 17px;
+            grid-template-areas: 
+                'logo name practise codelibrary contact login';
+            /* grid-auto-rows: minmax(100px, auto); */
+            border-bottom: 2px solid aquamarine;
+            z-index:2;
+            box-shadow: 10px 10px 5px 12px rgba(0, 0, 0,0.3);
+        }
+        .foot
+        {
+            bottom:0;
+            width:98%;
+            text-align: center;
+            padding: 50px;
+            background-color: black;
+        }
+        .main
+        {
+            display: grid;
+            background: rgba(0, 0, 0, 0.5);
+            grid-template-columns: 1.5fr 1fr;
+            grid-template-rows: 1.5fr 1.5fr;
+            padding: 20px;
+            padding-top: 150px;
+            grid-column-gap: 17px;
+            grid-row-gap: 17px;
+            grid-template-areas: 
+                'problem1 topprob'
+                'problem2 lang'
+                'prevnext nothing';
+            line-height: 1.6;
+            /* grid-auto-rows: minmax(100px, auto); */
+        }
+        .practise,.codelibrary,.contact
+        {
+            padding:20px;
+        }
+        .login
+        {
+            padding:20px;
+        }
+        .problem1,.problem2
+        {
+            /* border: 2px solid rgb(2, 246, 233); */
+            padding: 37px;
+            background-color: black;
+            color:azure;
+        }
+        .topprob,.lang
+        {
+            padding: 37px;
+            background-color: rgba(34, 34, 34, 0.5);
+            border: 1px solid grey;
+            color:aliceblue;
+        }
+        .but{
+            background-color: rgb(0, 41, 41);
+            color:aqua;
+            padding: 10px;
+            /* width: 100%; */
+        }
+        .icons{
+            background-color: rgb(0, 0, 0);
+            color:aqua;
+            /* padding: 10px; */
+            /* width: 100%; */
+        }
+        .but2
+        {
+            background-color: rgb(0, 41, 41);
+            color:aqua;
+            padding: 10px;
+            /* width: 100%; */
+            
+        }
+        .butz{
+            background-color: black;
+            color:aqua;
+            padding:10px;
+        }
+        ol.prob
+        {
+            list-style-type: decimal;
+        }
+        .h
+        {
+            border: 2px solid rgba(34, 34, 34, 0);
+            border-left: 10px solid aqua;;
+            padding: 10px;
+            /* width:20%; */
+            font-size: 20px;
+            /* text-align: center; */
+            color:aliceblue;
+        }
+        #button-start,#button-reset,#button-stop,#button-start2,#button-reset2,#button-stop2
+        {
+            background-color: darkcyan;
+            color:white;
+            
+        }
+        button:hover
+        {
+            background-color: aqua!important;
+            color: black!important;
+        }
+        #test{
+            width: 100%;
+            height: 350%; 
+            color: lime;
+        }
+        .submit
+        {
+            background-color: rgb(0, 73, 0);
+            color:white;
+            border:2px solid black;
+            padding:10px;
+        }
+        .run
+        {
+            background-color: rgb(73, 0, 0);
+            color:white;
+            border:2px solid black;
+            padding:10px;
+        }
+        #test:focus{
+            border: 2px solid black;
+            border-left: 2px solid lime;
+        }
+        .icons:hover{
+            background-color: rgb(0, 0, 0) !important;
+            color:aqua !important;
+        }
+        .submit:hover{
+            background-color: lime;
+            color: black;
+        }
+        .run:hover{
+            background-color: red;
+            color:black;
+        }
+        li:hover{
+            color:aqua;
+        }
+        .h:hover
+        {
+            border: 2px solid rgba(34, 34, 34, 0);
+            border-left: 10px solid aqua;;
+            padding: 10px;
+            /* width:20%; */
+            font-size: 20px;
+            /* text-align: center; */
+            color:aliceblue;
+            color: #fff;
+            text-shadow:
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 21px #fff,
+                0 0 42px #0fa,
+                0 0 82px #0fa,
+                0 0 92px #0fa,
+                0 0 102px #0fa,
+                0 0 151px #0fa;
+        }
+        .name,.heading
+        {
+            color:aqua;
+        }
+        .name,.heading:hover
+        {
+            color: rgb(0, 221, 255);
+            color:rgb(0, 255, 247);
+            text-shadow:
+                0 0 7px rgb(0, 255, 247),
+                0 0 10px rgb(0, 255, 247),
+                0 0 21px rgb(0, 255, 247)f,
+                0 0 42px #0fa,
+                0 0 82px #0fa,
+                0 0 92px #0fa,
+                0 0 102px #0fa,
+                0 0 151px #0fa;
+        }
+    </style>
+    <script>
+        function myFunction()
+         {
+          var dots = document.getElementById("dots");
+          var moreText = document.getElementById("more");
+          var btnText = document.getElementById("myBtn");
+        
+          if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "See More"; 
+            moreText.style.display = "none";
+          } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "See Less"; 
+            moreText.style.display = "inline";
+          }
+        }
+        function myFunction2()
+        {
+          var dots = document.getElementById("dots2");
+          var moreText = document.getElementById("more2");
+          var btnText = document.getElementById("myBtn2");
+        
+          if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "See More"; 
+            moreText.style.display = "none";
+          } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "See Less"; 
+            moreText.style.display = "inline";
+          }
+        }
+        function myFunction3()
+        {
+          var dots = document.getElementById("dots3");
+          var moreText = document.getElementById("more3");
+          var btnText = document.getElementById("myBtn3");
+        
+          if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "See More"; 
+            moreText.style.display = "none";
+          } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "See Less"; 
+            moreText.style.display = "inline";
+          }
+        }
+        function myFunction4()
+        {
+          var dots = document.getElementById("dots4");
+          var moreText = document.getElementById("more4");
+          var btnText = document.getElementById("myBtn4");
+        
+          if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "See More"; 
+            moreText.style.display = "none";
+          } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "See Less"; 
+            moreText.style.display = "inline";
+          }
+        }
+        window.onload = function() {
+        
+        var seconds = 00; 
+        var tens = 00; 
+        var appendTens = document.getElementById("tens")
+        var appendSeconds = document.getElementById("seconds")
+        var buttonStart = document.getElementById('button-start');
+        var buttonStop = document.getElementById('button-stop');
+        var buttonReset = document.getElementById('button-reset');
+        var Interval ;
+
+        buttonStart.onclick = function() {
+            
+            clearInterval(Interval);
+            Interval = setInterval(startTimer, 10);
+        }
+        
+            buttonStop.onclick = function() {
+            clearInterval(Interval);
+        }
+        
+
+        buttonReset.onclick = function() {
+            clearInterval(Interval);
+            tens = "00";
+            seconds = "00";
+            appendTens.innerHTML = tens;
+            appendSeconds.innerHTML = seconds;
+        }
+        
+        
+        
+        function startTimer () {
+            tens++; 
+            
+            if(tens <= 9){
+            appendTens.innerHTML = "0" + tens;
+            }
+            
+            if (tens > 9){
+            appendTens.innerHTML = tens;
+            
+            } 
+            
+            if (tens > 99) {
+            console.log("seconds");
+            seconds++;
+            appendSeconds.innerHTML = "0" + seconds;
+            tens = 0;
+            appendTens.innerHTML = "0" + 0;
+            }
+            
+            if (seconds > 9){
+            appendSeconds.innerHTML = seconds;
+            }
+        
+        }
+        }
+        // var count =0;
+        // var btn = document.getElementById("submit");
+        // var disp = document.getElementById("display");
+  
+        // btn.onclick = function () {
+        //     count++;
+        //     disp.innerHTML = count;
+        // }
+    </script>
+</head>
+<body>
+    <div class="head">
+        <div class="logo">
+            <img src="https://i.pinimg.com/originals/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.png" class="image" height="70">
+        </div>
+        <div class="name">
+            <h2 class="heading">Computer Geeks</h2>
+        </div>
+        <div class="practise">
+            <button class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+                <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+              </svg></button><button class="butz" onclick="window.location.href='practise.html';">PRACTISE</button>
+        </div>
+        <div class="codelibrary">
+            <button class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-collection" viewBox="0 0 16 16">
+                <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13z"/>
+              </svg></button><button class="butz" onclick="window.location.href='codelibrary.html';">CODE LIBRARY</button>
+        </div>
+        <div class="contact">
+            <button class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-person-rolodex" viewBox="0 0 16 16">
+                <path d="M8 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                <path d="M1 1a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h.5a.5.5 0 0 0 .5-.5.5.5 0 0 1 1 0 .5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5.5.5 0 0 1 1 0 .5.5 0 0 0 .5.5h.5a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H6.707L6 1.293A1 1 0 0 0 5.293 1H1Zm0 1h4.293L6 2.707A1 1 0 0 0 6.707 3H15v10h-.085a1.5 1.5 0 0 0-2.4-.63C11.885 11.223 10.554 10 8 10c-2.555 0-3.886 1.224-4.514 2.37a1.5 1.5 0 0 0-2.4.63H1V2Z"/>
+              </svg></button>
+            <button class="butz" onclick="window.location.href='contactus.html';">CONTACT</button>
+        </div>
+        <div class="login">
+            <button class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
+                <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"/>
+                <path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117zM11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5zM4 1.934V15h6V1.077l-6 .857z"/>
+              </svg></button>
+            <button class="butz" onclick="window.location.href='login.html';">LOGIN</button>
+        </div>
+    </div>
+    <div class="main">
+        
+        <div class="problem1" style="border-left: 2px solid aquamarine;">
+            <h2 class="h" >PROBLEM 1</h2>
+            <br>
+            <hr style="background-color:aquamarine">
+            <br>
+            <div>RJ is a very curious observer. On the first day of every month, he tries to figure out, for each of the seven days of the week, how many times that day occurs in the current month. RJ got confused so badly doing this that he asks for your help! He asks several queries; in each query, he gives you the number of days in the current month and which day of the week is on
+            <span id="dots">...</span>
+            <span id="more" style="display:none;">
+                the 1st of the current month. For each query, you should tell him how many times each day of the week occurs.
+                <h5>INPUT</h5>
+                <p>2</p>
+                <p>28 mon</p>
+                <p>31 wed</p>
+                <br>
+                <h5>OUTPUT</h5>
+                <p>4 4 4 4 4 4 4</p>
+                <p>4 4 5 5 5 4 4</p>
+            </span></div>
+            <button onclick="myFunction()" class="but "id="myBtn" style="position: absolute; right: 610px;z-index:1;">See More</button>
+            <br><br><br>
+            <select style="width:200px;background-color: black;color:aqua;" >
+                <option style="width:200px;background-color: black;color:aqua;" value="0">Select language:</option>
+                <option style="width:200px;background-color: black;color:aqua;" value="1">C++</option>
+                <option style="width:200px;background-color: black;color:aqua;"value="2">Python</option>
+                <option style="width:200px;background-color: black;color:aqua;"value="3">JAVA</option>
+              </select>
+              <div class="wrapper">
+                <h3 style="color:darkslategrey;">Stopwatch</h3>
+                <p><span id="seconds">00</span>:<span id="tens">00</span></p>
+                <button id="button-start">Start</button>
+                <button id="button-stop">Stop</button>
+                <button id="button-reset">Reset</button>
+                </div> 
+            <div>
+                <form >
+                  <textarea id="test"  rows="17" cols="50" style="background-color: rgb(0, 22, 22);border:2px solid black; border-left: 2px solid lime">Type your code....</textarea>
+                  <input type="submit" value="Submit" class="submit" id="submit">
+                  <input type="submit" value="Compile and Run" class="run">
+                </form>
+            </div>
+            
+            <br>
+            <br>
+        </div>
+        <div class="topprob" style="border: 2px solid rgba(34, 34, 34, 0);border-left: 2px solid whitesmoke;">
+            <h2 class="h">TOP RATED PROBLEMS</h2>
+            <br>
+            <hr style="background-color:aquamarine">
+            <br>
+            <ol class="prob">
+                <div><li>Just like Mob!</li>
+                <li>Expensice Steps</li>
+                <li>Average Number</li>
+                <li>Making a Meal</li>
+                <li>Ada and Dishes</li>
+                <li>The One with Russ</li>
+                <li>New Piece</li>
+                <li>Racing Horses</li>
+                <li>Street Food</li>
+                <li>Plus Multiply</li>
+                <li>Equinox Strings</li>
+                <li>Fancy Quotes</li>
+                <span id="dots3">...</span>
+                <span id="more3" style="display:none;">
+                <li>Your Name is Mine</li>
+                <li>Closing the Tweets</li>
+                <li>Lucky lucky number</li>
+                <li>New Price</li>
+                <li>Old Repeat</li>
+                <li>Cool Name</li></span></div>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <button onclick="myFunction3()" class="but" id="myBtn3" style="position: absolute; right: 70px;">See More</button>
+            </ol>
+        </div>
+        <div class="problem2" style="border-left: 2px solid aquamarine;">
+            <h2 class="h">PROBLEM 2</h2>
+            <br>
+            <hr style="background-color:aquamarine">
+            <br>
+            <div>Chef is very fond of horses. He enjoys watching them race. As expected, he has a stable full of horses. He, along with his friends, goes to his stable during the weekends to watch a few of these horses race. Chef wants his friends to enjoy the race and so he wants the race to be close. This can happen only if the horses are comparable on their skill i.e. the difference in their skills is less.
+                <span id="dots2">...</span><span id="more2" style="display:none;">
+                    There are N horses in the stable. The skill of the horse i is represented by an integer S[i]. The Chef needs to pick 2 horses for the race such that the difference in their skills is minimum. This way, he would be able to host a very interesting race. Your task is to help him do this and report the minimum difference that is possible between 2 horses in the race.
+            <h5>INPUT</h5>
+            <p>1</p>
+            <p>5</p>
+            <p>4 9 1 32 13</p>
+            <br>
+            <h5>OUTPUT</h5>
+            <p>3</p>
+            </span></div>
+            <button onclick="myFunction2()" class="but" id="myBtn2" style="position: absolute; right: 610px;z-index:1;">See More</button>
+            <br><br><br>
+            <select style="width:200px;background-color: black;color:aqua;" >
+                <option style="width:200px;background-color: black;color:aqua;" value="0">Select language:</option>
+                <option style="width:200px;background-color: black;color:aqua;" value="1">C++</option>
+                <option style="width:200px;background-color: black;color:aqua;"value="2">Python</option>
+                <option style="width:200px;background-color: black;color:aqua;"value="3">JAVA</option>
+              </select>
+              
+            <div>
+                <form >
+                  <textarea id="test"  rows="17" cols="50" style="background-color: rgb(0, 22, 22);border:2px solid black; border-left: 2px solid lime">Type your code....</textarea>
+                  <input type="submit" value="Submit" class="submit">
+                  <input type="submit" value="Compile and Run" class="run">
+                </form>
+            </div>
+            <br>
+            <br>
+        </div>
+        <div class="lang" style="border: 2px solid rgba(34, 34, 34, 0);border-left: 2px solid whitesmoke;">
+            <h4 class="h" style="width:50%">TOP USED LANGUAGES</h4>
+            <br>
+            <hr style="background-color:aquamarine">
+            <br>
+            <ol class="prob">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>PYTHON</li>
+                <li>C</li>
+                <li>JAVA</li>
+                <li>PYTH 3</li>
+                <li>C#</li>
+                <li>JS</li>
+                <li>TEXT</li>
+                <span id="dots4">...</span>
+                <span id="more4" style="display:none">
+                <li>PHP</li></span>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <button onclick="myFunction4()" class="but" id="myBtn4" style="position: absolute; right: 70px;">See More</button>
+            </ol>
+        </div>
+        <div class="prevnext">
+            <button class="but2" onclick="window.location.href='home.html';">PREVIOUS</button>
+            <button class="but2" style="position: absolute; right: 610px;" onclick="window.location.href='practise.html';">NEXT</button>
+        </div>
+        <div class="nothing">
+        
+        </div>
+    </div>
+    <div class="foot">
+        <pre style="color:rgb(255, 255, 255);">CREATED BY VIKAS GURRAM</pre>
+    </div>
+</body>
+</html>

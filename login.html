@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://i.pinimg.com/originals/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.png"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        @import "style-screen.css" screen;
+        @import "style-print.css" print,speech;
+        body {
+            background-image: url('./img/amin-khorsand-MDrMf2PyM3A-unsplash.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: cover;
+            font-family: Arial;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .head
+        {
+            display: grid;
+            background-color: rgba(0, 0, 0, 0.3);
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 200px;
+            grid-column-gap: 17px;
+            grid-row-gap: 17px;
+            grid-template-areas: 
+                'n1 login n2';
+            /* grid-auto-rows: minmax(100px, auto); */
+        }
+        body {font-family: Arial, Helvetica, sans-serif;}
+        form {border: 3px solid #00ffdd;}
+        input[type=text], input[type=password]
+        {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid rgb(0, 255, 251);
+        background-color: rgb(23, 48, 48);
+        color:aqua;
+        box-sizing: border-box;
+        }
+
+        button {
+        background-color: #04AA6D;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        }
+
+        button:hover {
+        background-color:lime;
+        color:black;
+        }
+
+        .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+        }
+
+        .container {
+        padding: 16px;
+        background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        span.psw {
+        float: right;
+        padding-top: 16px;
+        
+        }
+        @media screen and (max-width: 300px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+        .cancelbtn {
+            width: 100%;
+        }
+        }
+        .login{
+            background-color: black;
+        }
+        nav{
+		    display:flex;
+			
+			/* justify content:space-between; */
+			align-items:center;
+		}
+		.nav-links{
+		    flex:1;
+			text-align:left;
+		}
+		.nav-links ul li{
+		    list-style:none;
+			display:inline-block;
+			padding:8px 12px;
+			position:relative;
+		}
+				.nav-links ul li a{
+		    color:#fff;
+			text-decoration:none;
+			font-size:13px;
+		}
+		.nav-links ul li a:hover{
+		    color:blue;
+			text-transform:30px;
+		}
+    </style>
+</head>
+    <section class="header">
+        <nav>
+        <a href="home5.html"></a>
+        <div class="nav-links">
+        <ul>
+        <li><a href="home.html">BACK</a></li>
+        </ul>
+        </div>
+        </nav>
+        <div class="head">
+            <div class="n1"></div>
+            <div class="login">
+                <form action="/action_page.php" method="post">
+                <div class="container">
+                    <label for="uname" style="color:lime"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw" style="color:lime"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                        
+                    <button type="submit">Login</button>
+                    <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+
+                <div class="container" style="background-color:rgb(23, 48, 48)">
+                    <button type="button" class="cancelbtn">Cancel</button>
+                    <span class="psw" style="color:aqua">Forgot <a href="#">password?</a></span>
+                </div>
+                </form>
+            </div>
+            <div class n2></div>
+        </div>
+<body>
+    
+    
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://i.pinimg.com/originals/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.png"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+    <style>
+        @import "style-screen.css" screen;
+        @import "style-print.css" print,speech;
+        body {
+            background-image: url('./img/pexels-photo-758532.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: cover;
+            font-family: Arial;
+            
+            margin: 0;
+            padding: 70px;
+        }
+        
+        .grid-item 
+        {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(246, 255, 0, 0.7);
+            padding: 20px;
+            font-size: 17px;
+            text-align: center;
+            color:aliceblue;
+        }
+        .featured{
+            display: grid;
+            background: rgba(0, 0, 0, 0);
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows:1fr 0.2fr 1fr 0.2fr;
+            padding: 10px;
+            grid-column-gap: 17px;
+            border-radius: 25px;
+            grid-row-gap: 17px;
+            /* grid-template-areas: 
+                'image image yourperformance topcoders'
+                'image image upcoming onevonecontests'; */
+            grid-auto-rows: minmax(100px, auto);
+        }
+        .pics{
+            border-radius: 25px;
+            background-color: rgba(0, 0, 0, 1);
+            border: 1px solid rgba(255, 251, 5, 0.7);
+            padding: 20px;
+            font-size: 17px;
+            text-align: center;
+            color:aliceblue;
+        }
+        .button{
+            border-radius: 25px;
+            text-align: center;
+            
+        }
+        nav{
+		    display:flex;
+			
+			/* justify content:space-between; */
+			align-items:center;
+		}
+		.nav-links{
+		    flex:1;
+			text-align:left;
+		}
+		.nav-links ul li{
+		    list-style:none;
+			display:inline-block;
+			padding:8px 12px;
+			position:relative;
+		}
+				.nav-links ul li a{
+		    color:#fff;
+			text-decoration:none;
+			font-size:13px;
+		}
+		.nav-links ul li a:hover{
+		    color:blue;
+			text-transform:30px;
+		}
+        button:hover{
+            background-color:orangered!important;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+        <a href="home5.html"></a>
+        <div class="nav-links">
+        <ul>
+        <li><a href="home.html">BACK</a></li>
+        </ul>
+        </div>
+        </nav>
+    <div class="featured">
+        <div class="pics">
+            <img src="https://images.pexels.com/photos/1616403/pexels-photo-1616403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height="220">
+            <p style="color:grey">The CloudCode Beginner's guide</p>
+        </div>
+        <div class="pics">
+            <img src="https://images.pexels.com/photos/10458835/pexels-photo-10458835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height="220">
+            <p style="color:grey">Data Structures and Algroithms</p>
+        </div>
+        <div class="pics">
+            <img src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height="220">
+            <p style="color:grey">Top Interview Questions</p>
+        </div>
+        <div class="button">
+            <button style="background-color: rgb(253, 253, 2);border-radius: 25px;font-size: 17px;padding:17px" type="submit" class="btn">Explore</button>
+        </div>
+        <div class="button">
+            <button style="background-color: rgb(253, 253, 2);border-radius: 25px;font-size: 17px;padding:17px" type="submit" class="btn">Explore</button>
+        </div>
+        <div class="button">
+            <button style="background-color: rgb(253, 253, 2);border-radius: 25px;font-size: 17px;padding:17px" type="submit" class="btn">Explore</button>
+        </div>
+        <div class="pics">
+            <img src="https://images.pexels.com/photos/325649/pexels-photo-325649.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height="220">
+            <p style="color:grey">Dynamic Programming</p>
+        </div>
+        <div class="pics">
+            <img src="https://images.pexels.com/photos/1789968/pexels-photo-1789968.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height="220">
+            <p style="color:grey">Google Interview</p>
+        </div>
+        <div class="pics">
+            <img src="https://images.pexels.com/photos/2684383/pexels-photo-2684383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height="220">
+            <p style="color:grey">Graph</p>
+        </div>
+        <div class="button">
+            <button style="background-color: rgb(253, 253, 2);border-radius: 25px;font-size: 17px;padding:17px" type="submit" class="btn">Explore</button>
+        </div>
+        <div class="button">
+            <button style="background-color: rgb(253, 253, 2);border-radius: 25px;font-size: 17px;padding:17px" type="submit" class="btn">Explore</button>
+        </div>
+        <div class="button">
+            <button style="background-color: rgb(253, 253, 2);border-radius: 25px;font-size: 17px;padding:17px" type="submit" class="btn">Explore</button>
+        </div>
+    </div>
+</body>
+</html>
